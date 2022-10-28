@@ -1,21 +1,27 @@
-# ROLES MANAGEMENT
+USE ROLE SECURITYADMIN;
 CREATE ROLE TRAINING_ROLE IF NOT EXISTS;
 GRANT ROLE sysadmin TO ROLE TRAINING_ROLE;
 GRANT ROLE accountadmin TO ROLE TRAINING_ROLE;
 GRANT ROLE TRAINING_ROLE TO ROLE securityadmin;
 USE ROLE TRAINING_ROLE;
 
-# DATABASE AND SCHEMA CREATION
-CREATE DATABASE TRAINING_DB IF NOT EXISTS;
+CREATE DATABASE TRAINING_DB;
 CREATE SCHEMA TRAINING_DB.TRAINING_SC;
 USE DATABASE TRAINING_DB;
 USE SCHEMA TRAINING_DB.TRAINING_SC; 
+
 CREATE OR REPLACE TABLE TRAINING_TB (
-    id integer primary key,
-    order_id integer unique
-)
+    id number autoincrement start 1 increment 1,
+    order_id number
+);
 CREATE OR REPLACE TABLE ORDERS_TT (
-    id integer primary key,
+    id number autoincrement start 1 increment 1,
     name varchar(250),
     content varchar(250)
-)
+);
+
+ALTER TABLE TRAINING_DB.TRAINING_SC.TRAINING_TB ADD PRIMARY KEY (id);
+ALTER TABLE TRAINING_DB.TRAINING_SC.ORDERS_TT ADD PRIMARY KEY (id);
+
+grant select on  all tables in database TRAINING_DB to role sysadmin;
+grant insert,delete on all tables in schema TRAINING_DB.TRAINING_SC to role sysadmin;

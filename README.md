@@ -6,7 +6,6 @@ Review the creation of the `roles`, and `configuration`.
 
 ## Documentation
 
-Commands used overview
-
+Commands used overview: [Documentation](docs/README.md)
 
 ![Snowflake logo](docs/img/Snowflake_Logo.jpg)
