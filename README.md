@@ -1,28 +1,12 @@
-# Documentation
+# Snowflake script :snowflake:
 
-Review some about how the data architecture of this project was created
+Review the creation of the `roles`, and `configuration`.
 
-## Snowflake Python Connector
+![Snowflake logo](docs/img/snowflake.webp)
 
-Review some about how the connection with the snowflake database is established with this python connector.
+## Documentation
 
-[Python Documentation](python/README.md)
+Commands used overview
 
 
-![Snowflake logo](img/python.png)
-
-## Snowflake data related topics
-
-Review some about how the data architecture of this project was created
-
-[Snowflake Documentation](snowflake/README.md)
-
-![Snowflake logo](img/logo.jpg)
-
-## Shell Script Automation
-
-Automate the execution of the various scripts included in this application through the usage of **MAKE GNU**
-
-[Makefile Documentation](makefile/README.md)
-
-![Snowflake logo](img/gnu-make.webp)
+![Snowflake logo](docs/img/Snowflake_Logo.jpg)
